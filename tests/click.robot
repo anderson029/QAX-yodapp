@@ -4,7 +4,7 @@ Library    AppiumLibrary
 
 *** Test Cases ***
 
-Deve abrir a tela principal
+Deve realizar um clique simples
   Open Application    http://localhost:4723/wd/hub
   ...    platformName=Android
   ...    deviceName=Android Emulator
@@ -15,6 +15,8 @@ Deve abrir a tela principal
 
   Wait Until Page Contains    Yodapp
   Wait Until Page Contains    Mobile Training
-  Wait Until Page Contains    by Papito  
+  Wait Until Page Contains    by Papito 
+
+  Click Text    QAX 
 
   Close Application

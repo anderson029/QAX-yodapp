@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-10T14:27:02.085881" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-10T14:40:50.066873" rpa="false" schemaversion="5">
 <suite id="s1" name="Click" source="C:\QAx\projects\QAX-yodapp-robot\tests\click.robot">
-<test id="s1-t1" name="Deve realizar um clique simples" line="7">
+<test id="s1-t1" name="Deve realizar um clique simples" line="10">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>http://localhost:4723/wd/hub</arg>
 <arg>platformName=Android</arg>
@@ -17,36 +17,27 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-02-10T14:27:02.594645" elapsed="33.888323"/>
+<status status="PASS" start="2025-02-10T14:40:50.443682" elapsed="23.013112"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>Yodapp</arg>
+<arg>${START}</arg>
+<arg>5</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2025-02-10T14:27:36.485121" elapsed="4.632204"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>Mobile Training</arg>
-<doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2025-02-10T14:27:41.117961" elapsed="0.508087"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>by Papito</arg>
-<doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2025-02-10T14:27:41.626725" elapsed="0.628132"/>
+<status status="PASS" start="2025-02-10T14:41:13.457862" elapsed="3.823653"/>
 </kw>
 <kw name="Click Text" owner="AppiumLibrary">
-<msg time="2025-02-10T14:27:43.665096" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
-<arg>QAX</arg>
+<msg time="2025-02-10T14:41:19.676909" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
+<arg>${START}</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" start="2025-02-10T14:27:42.255690" elapsed="1.409593"/>
+<status status="PASS" start="2025-02-10T14:41:17.282104" elapsed="2.394940"/>
 </kw>
 <kw name="Close Application" owner="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" start="2025-02-10T14:27:43.665827" elapsed="2.424082"/>
+<status status="PASS" start="2025-02-10T14:41:19.677661" elapsed="1.501822"/>
 </kw>
-<status status="PASS" start="2025-02-10T14:27:02.593403" elapsed="43.497644"/>
+<status status="PASS" start="2025-02-10T14:40:50.442708" elapsed="30.737401"/>
 </test>
-<status status="PASS" start="2025-02-10T14:27:02.088749" elapsed="44.004808"/>
+<status status="PASS" start="2025-02-10T14:40:50.068938" elapsed="31.112789"/>
 </suite>
 <statistics>
 <total>

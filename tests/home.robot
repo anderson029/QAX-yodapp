@@ -5,7 +5,7 @@ Library    AppiumLibrary
 *** Test Cases ***
 
 Deve abrir a tela principal
-  Open Application    http://localhost:4723/wd/hub
+  Open Application    http://localhost:4723
   ...    platformName=Android
   ...    deviceName=Android Emulator
   ...    automationName=UIAutomator2
@@ -16,5 +16,4 @@ Deve abrir a tela principal
   Wait Until Page Contains    Yodapp
   Wait Until Page Contains    Mobile Training
   Wait Until Page Contains    by Papito  
-
-  Close Application
+  # Close Application

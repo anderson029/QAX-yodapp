@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-10T14:40:50.066873" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-11T19:26:51.366226" rpa="false" schemaversion="5">
 <suite id="s1" name="Click" source="C:\QAx\projects\QAX-yodapp-robot\tests\click.robot">
 <test id="s1-t1" name="Deve realizar um clique simples" line="10">
 <kw name="Open Application" owner="AppiumLibrary">
-<arg>http://localhost:4723/wd/hub</arg>
+<arg>http://localhost:4723</arg>
 <arg>platformName=Android</arg>
 <arg>deviceName=Android Emulator</arg>
 <arg>automationName=UIAutomator2</arg>
@@ -17,27 +17,48 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-02-10T14:40:50.443682" elapsed="23.013112"/>
+<status status="PASS" start="2025-02-11T19:26:51.877469" elapsed="20.658108"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>${START}</arg>
 <arg>5</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2025-02-10T14:41:13.457862" elapsed="3.823653"/>
+<status status="PASS" start="2025-02-11T19:27:12.536263" elapsed="6.024475"/>
 </kw>
 <kw name="Click Text" owner="AppiumLibrary">
-<msg time="2025-02-10T14:41:19.676909" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
+<msg time="2025-02-11T19:27:19.619136" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
 <arg>${START}</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" start="2025-02-10T14:41:17.282104" elapsed="2.394940"/>
+<status status="PASS" start="2025-02-11T19:27:18.561190" elapsed="1.058124"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-11T19:27:19.620310" level="INFO">${hamburguer} = xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<var>${hamburguer}</var>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-11T19:27:19.619851" elapsed="0.000543"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-02-11T19:27:20.962902" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]
+xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hamburguer}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-02-11T19:27:19.620923" elapsed="1.342091"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-02-11T19:27:20.964465" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<msg time="2025-02-11T19:27:21.163942" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hamburguer}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-02-11T19:27:20.963336" elapsed="0.200748"/>
 </kw>
 <kw name="Close Application" owner="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" start="2025-02-10T14:41:19.677661" elapsed="1.501822"/>
+<status status="PASS" start="2025-02-11T19:27:21.164636" elapsed="0.841795"/>
 </kw>
-<status status="PASS" start="2025-02-10T14:40:50.442708" elapsed="30.737401"/>
+<status status="PASS" start="2025-02-11T19:26:51.876422" elapsed="30.130631"/>
 </test>
-<status status="PASS" start="2025-02-10T14:40:50.068938" elapsed="31.112789"/>
+<status status="PASS" start="2025-02-11T19:26:51.368606" elapsed="30.640285"/>
 </suite>
 <statistics>
 <total>

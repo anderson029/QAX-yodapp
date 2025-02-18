@@ -14,3 +14,19 @@ Deve realizar um clique simples
   Wait Until Page Contains      Isso é um clique simples
 
   Close session
+
+Deve realizar um clique longo
+  [Tags]    long
+
+  Start session
+  Get started
+  Navigate to    Clique em Botões
+  Go to item    Clique longo    Botão clique longo
+
+  ${locator}    Set Variable    id=com.qaxperience.yodapp:id/long_click
+  @{positions} =    Create List    ${535}    ${1328}
+  Tap With Positions    ${1000}    ${positions}
+
+  Wait Until Page Contains    Isso é um clique longo
+  
+  Close session

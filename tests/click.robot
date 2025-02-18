@@ -27,12 +27,12 @@ Deve realizar um clique longo
 
   # Obtém as coordenadas do elemento
   ${element_location}=   Get Element Location    ${locator}
- 
   ${x}=    Set Variable    ${element_location}[x]
   ${y}=    Set Variable    ${element_location}[y]
 
   # Cria uma lista com as coordenadas
   @{positions}=    Create List    ${x}    ${y}
+
   Tap With Positions    ${1000}    ${positions}
 
   Wait Until Page Contains    Isso é um clique longo

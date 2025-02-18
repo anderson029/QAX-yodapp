@@ -24,9 +24,17 @@ Deve realizar um clique longo
   Go to item    Clique longo    Botão clique longo
 
   ${locator}    Set Variable    id=com.qaxperience.yodapp:id/long_click
-  @{positions} =    Create List    ${535}    ${1328}
+
+  # Obtém as coordenadas do elemento
+  ${element_location}=   Get Element Location    ${locator}
+ 
+  ${x}=    Set Variable    ${element_location}[x]
+  ${y}=    Set Variable    ${element_location}[y]
+
+  # Cria uma lista com as coordenadas
+  @{positions}=    Create List    ${x}    ${y}
   Tap With Positions    ${1000}    ${positions}
 
   Wait Until Page Contains    Isso é um clique longo
-  
+
   Close session

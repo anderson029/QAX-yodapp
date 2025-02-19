@@ -5,7 +5,7 @@ Resource    ../resources/base.resource
 *** Test Cases ***
 
 Deve realizar um clique simples
-  [Tags]    simple    smoke
+  [Tags]    simple    smoke    click
   Start session
   Get started
   Navigate to     Clique em Botões
@@ -17,7 +17,7 @@ Deve realizar um clique simples
   Close session
 
 Deve realizar um clique longo
-  [Tags]    long    smoke
+  [Tags]    long    smoke    click
 
   Start session
   Get started

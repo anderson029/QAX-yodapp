@@ -5,7 +5,7 @@ Resource    ../resources/base.resource
 *** Test Cases ***
 
 Deve fazer login com sucesso
-    [Tags]    loginOk    smoke
+    [Tags]    loginOk    login    smoke
     Start session
     Get started
     Navigate to    Formulários
@@ -17,7 +17,7 @@ Deve fazer login com sucesso
     Close session
 
 Não deve logar com credenciais incorretas
-    [Tags]    loginNok    smoke
+    [Tags]    loginNok    login    smoke
     Start session
     Get started
     Navigate to    Formulários
@@ -27,3 +27,10 @@ Não deve logar com credenciais incorretas
     Wait Until Page Contains    Oops! Credenciais incorretas.     
 
     Close session
+
+*** Keywords ***
+Input Credentials
+    [Arguments]    ${email}    ${password}
+    Input Text     id=com.qaxperience.yodapp:id/etEmail    ${email}
+    Input Text     id=com.qaxperience.yodapp:id/etPassword    ${password}
+    Click Text     ENTRAR

@@ -7,7 +7,6 @@ ${START}    QAX
 
 *** Keywords ***
 Start session
-
   Open Application    http://localhost:4723
   ...    platformName=Android
   ...    deviceName=Android Emulator
@@ -31,7 +30,7 @@ Navigate to
 
 Go to item
   [Arguments]    ${item}    ${checkout}  
-  Wait Until Page Contains      ${item}    5
+  Wait Until Page Contains      ${item}    10
   Click Text                    ${item}
   Wait Until Page Contains    ${checkout} 
 

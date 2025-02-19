@@ -34,5 +34,11 @@ Go to item
   Click Text                    ${item}
   Wait Until Page Contains    ${checkout} 
 
+Input Credentials
+    [Arguments]    ${email}    ${password}
+    Input Text     id=com.qaxperience.yodapp:id/etEmail    ${email}
+    Input Text     id=com.qaxperience.yodapp:id/etPassword    ${password}
+    Click Text     ENTRAR
+
 Close session
   Close Application

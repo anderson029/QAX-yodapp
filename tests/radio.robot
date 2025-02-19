@@ -3,7 +3,7 @@ Resource    ../resources/base.resource
 
 *** Test Cases ***
 Deve selecionar a opção Java
-    [Tags]    radioButton
+    [Tags]    radioButton    smoke
     Start session
     Get started
     Navigate to    Check e Radio

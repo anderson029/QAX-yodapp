@@ -3,7 +3,7 @@ Resource    ../resources/base.resource
 
 *** Test Cases ***
 Deve marcar as techs que usam appium
-    [Tags]    checkbox
+    [Tags]    checkbox    smoke
     Start session
     Get started
     Navigate to    Check e Radio

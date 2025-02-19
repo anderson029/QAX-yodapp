@@ -5,6 +5,7 @@ Library    AppiumLibrary
 *** Test Cases ***
 
 Deve abrir a tela principal
+  [Tags]    home    smoke
   Open Application    http://localhost:4723
   ...    platformName=Android
   ...    deviceName=Android Emulator

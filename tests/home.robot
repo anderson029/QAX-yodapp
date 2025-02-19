@@ -1,18 +1,13 @@
 *** Settings ***
 
-Library    AppiumLibrary
+Resource    ../resources/base.resource
 
 *** Test Cases ***
 
 Deve abrir a tela principal
   [Tags]    home    smoke
-  Open Application    http://localhost:4723
-  ...    platformName=Android
-  ...    deviceName=Android Emulator
-  ...    automationName=UIAutomator2
-  ...    app=${EXECDIR}/app/yodapp-beta.apk
-  ...    udid=emulator-5554
-  ...    autoGrantPermissions=true 
+
+  Start session
 
   Wait Until Page Contains    Yodapp
   Wait Until Page Contains    Mobile Training

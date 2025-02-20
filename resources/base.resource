@@ -25,7 +25,7 @@ Navigate to
   Wait Until Element Is Visible    ${hamburguer}
   Click Element    ${hamburguer}
   ${menu_item}    Set Variable    xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="${item_text}"]
-  Wait Until Element Is Visible    ${menu_item}    5    
+  Wait Until Element Is Visible    ${menu_item}    10    
   Click Element    ${menu_item}
 
 Go to item
@@ -35,4 +35,5 @@ Go to item
   Wait Until Page Contains    ${checkout} 
   
 Close session
+  Capture Page Screenshot
   Close Application

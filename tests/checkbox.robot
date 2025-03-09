@@ -1,10 +1,13 @@
 *** Settings ***
 Resource    ../resources/base.resource
 
+Task Setup    Start session
+Task Teardown    Close session
+
 *** Test Cases ***
 Deve marcar as techs que usam appium
     [Tags]    checkbox    smoke
-    Start session
+
     Get started
     Navigate to    Check e Radio
     Go to item    Checkbox    Marque as techs que usam Appium      
@@ -14,4 +17,3 @@ Deve marcar as techs que usam appium
     FOR    ${tech}    IN    @{techs}
       Click Element    xpath=//android.widget.CheckBox[contains(@text, "${tech}")]
     END
-    Close session

@@ -1,10 +1,13 @@
 *** Settings ***
 Resource    ../resources/base.resource
 
+Task Setup    Start session
+Task Teardown    Close session
+
 *** Test Cases ***
 Deve escolher o nível Jedi e confirmar o cadastro
   [Tags]    jedi    smoke    spinner
-  Start session
+
   Get started
   Navigate to    Formulários
   Go to item    Cadastro    Crie sua conta.
@@ -15,7 +18,7 @@ Deve escolher o nível Jedi e confirmar o cadastro
 
 Deve escolher o nível outros e confirmar o cadastro
   [Tags]    outros    smoke    spinner
-  Start session
+
   Get started
   Navigate to    Formulários
   Go to item    Cadastro    Crie sua conta.
@@ -26,7 +29,7 @@ Deve escolher o nível outros e confirmar o cadastro
 
 Deve exibir a mensagem de erro quando não preencher o nome
   [Tags]    nameInvalid    smoke    spinner
-  Start session
+  
   Get started
   Navigate to    Formulários
   Go to item    Cadastro    Crie sua conta.
@@ -37,7 +40,7 @@ Deve exibir a mensagem de erro quando não preencher o nome
 
 Deve exibir a mensagem de erro quando não preencher o email
   [Tags]    nameInvalid    smoke    spinner
-  Start session
+  
   Get started
   Navigate to    Formulários
   Go to item    Cadastro    Crie sua conta.
@@ -48,7 +51,7 @@ Deve exibir a mensagem de erro quando não preencher o email
 
 Deve exibir a mensagem de erro quando não preencher a senha
   [Tags]    nameInvalid    smoke    spinner
-  Start session
+  
   Get started
   Navigate to    Formulários
   Go to item    Cadastro    Crie sua conta.

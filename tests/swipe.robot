@@ -1,10 +1,13 @@
 *** Settings ***
 Resource    ../resources/base.resource
 
+Task Setup    Start session
+Task Teardown    Close session
+
 *** Test Cases ***
 Deve pode remover o Darth Vader
   [Tags]    darth    smoke    swipe    
-  Start session
+  
   Get started
   Navigate to    Star Wars
   Go to item    Lista    Lista 

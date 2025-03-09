@@ -1,11 +1,14 @@
 *** Settings ***
 Resource    ../resources/base.resource
 
+Task Setup    Start session
+Task Teardown    Close session
+
 *** Test Cases ***
 
 Deve realizar um clique simples
   [Tags]    simple    smoke    click
-  Start session
+  
   Get started
   Navigate to     Clique em Botões
   Go to item      Clique simples    Botão clique simples       
@@ -13,11 +16,10 @@ Deve realizar um clique simples
   Click Text                    CLIQUE SIMPLES
   Wait Until Page Contains      Isso é um clique simples
 
-  Close session
 
 Deve realizar um clique longo
   [Tags]    long    smoke    click
-  Start session
+
   Get started
   Navigate to    Clique em Botões
   Go to item    Clique longo    Botão clique longo
@@ -35,5 +37,3 @@ Deve realizar um clique longo
   Tap With Positions    ${1000}    ${positions}
 
   Wait Until Page Contains    Isso é um clique longo
-
-  Close session
